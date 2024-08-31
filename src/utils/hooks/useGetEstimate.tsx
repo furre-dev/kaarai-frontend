@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const errorMessage = "Could not get car price information. Try again later, but if it presists please contact support!"
+const errorMessage = "Please double-check the license plate you entered and try again. If the issue continues, feel free to contact support, and we'll be happy to assist you in resolving the problem!"
 
 export default function useGetEstimate(veh_reg: string) {
   const [data, setData] = useState<{ car: any, price: any, listings: [] } | null>(null);
@@ -20,12 +20,16 @@ export default function useGetEstimate(veh_reg: string) {
             "Content-Type": "application/json",
           },
         })
+
+        if (!response.ok) {
+          console.log(response.status)
+        }
+
         const data: IPredictedPriceResponse = await response.json()
         setLoading(false)
         setData(data)
 
       } catch (e) {
-        console.error(e)
         setLoading(false)
         setError(errorMessage);
       }

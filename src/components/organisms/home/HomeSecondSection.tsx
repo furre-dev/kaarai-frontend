@@ -1,4 +1,4 @@
-import MainButton from "../MainButton"
+import MainButton from "../../atoms/MainButton"
 
 export default function HomeSecondSection() {
   const HowItWorksListItems: string[][] = [

@@ -2,8 +2,7 @@
 import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { getPredictedPrice } from "@/utils/types/getPredictedPrice";
+import Navbar from "@/components/organisms/Navbar";
 
 const RedHatDisplay = Red_Hat_Display({ subsets: ["latin"] });
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import LoadingCircle from "../../public/assets/loadingCircle";
+import LoadingCircle from "../../../public/assets/loadingCircle";
 
 const loadingTextArray: string[] = [
   "Our AI scans the internet for similar car sales listings.",

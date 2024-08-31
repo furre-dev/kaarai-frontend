@@ -1,7 +1,8 @@
 "use client"
 import Link from "next/link";
-import MainInput from "../MainInput";
-import MainButton from "../MainButton";
+import MainInput from "../../atoms/MainInput";
+import MainButton from "../../atoms/MainButton";
+import VehicleForm from "@/components/molecules/VehicleForm";
 
 export default function HomeFirstSection() {
   return (
@@ -17,15 +18,7 @@ export default function HomeFirstSection() {
           </span>
         </Link>
       </div>
-      <form
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
-        className="max-w-[470px] bg-kaar-500 pt-12 pb-6 px-14 h-max flex flex-col text-center rounded-[42px]">
-        <h4 className="text-4xl font-bold text-kaar-50 mb-[46px]">
-          Please enter your plate number below and let AI estimate the value.
-        </h4>
-        <MainInput placeHolder="ABC123" />
-        <MainButton isLink={{ href: "/vehicle/HCA531" }} id="cta-button" type="button" full_w button_text="Get estimate" helper_text="For now you can only check cars registered in sweden" />
-      </form>
+      <VehicleForm />
     </section>
   )
 }

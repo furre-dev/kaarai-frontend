@@ -1,6 +1,6 @@
+import HomeFirstSection from "@/components/organisms/home/HomeFirstSection";
+import HomeSecondSection from "@/components/organisms/home/HomeSecondSection";
 import "material-symbols";
-import HomeFirstSection from "@/components/homepage/HomeFirstSection";
-import HomeSecondSection from "@/components/homepage/HomeSecondSection";
 
 export default function Home() {
 
