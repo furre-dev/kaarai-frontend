@@ -1,0 +1,3 @@
+//useGetEstimate fetch error messages
+export const fetchResponseErrorMessage = "Please double-check the license plate you entered and try again. If the issue continues, feel free to contact support, and we'll be happy to assist you in resolving the problem!"
+export const fetchServerErrorMessage = "Our servers are currently down. Please try again later. If the issue continues, contact support for help."

@@ -1,11 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-
-const errorMessage = "Please double-check the license plate you entered and try again. If the issue continues, feel free to contact support, and we'll be happy to assist you in resolving the problem!"
+import { fetchResponseErrorMessage, fetchServerErrorMessage } from "../strings/errors";
 
 export default function useGetEstimate(veh_reg: string) {
-  const [data, setData] = useState<{ car: any, price: any, listings: [] } | null>(null);
+  const [data, setData] = useState<IPredictedPriceResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<null | string>(null);
 
@@ -21,8 +20,8 @@ export default function useGetEstimate(veh_reg: string) {
           },
         })
 
-        if (!response.ok) {
-          console.log(response.status)
+        if (response.status === 400) {
+          setError(fetchResponseErrorMessage)
         }
 
         const data: IPredictedPriceResponse = await response.json()
@@ -31,7 +30,7 @@ export default function useGetEstimate(veh_reg: string) {
 
       } catch (e) {
         setLoading(false)
-        setError(errorMessage);
+        setError(fetchServerErrorMessage);
       }
     })()
   }, [])

@@ -1,7 +1,24 @@
+type CarValues = {
+  brand: string,
+  model: string,
+  year: string,
+  gearbox: string,
+  fuel_type: string,
+  car_hp: string,
+  mileage: number
+}
+
+type ListingsType = {
+  ad_href: string,
+  mileage: number,
+  name: string,
+  price: number
+}[]
+
 type IPredictedPriceResponse = {
-  car: any,
+  car: CarValues,
   price: number,
-  listings: []
+  listings: ListingsType
 }
 
 type IGetPredictedPrice = {

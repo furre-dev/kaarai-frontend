@@ -18,6 +18,7 @@ export default function MainInput({ placeHolder = "ABC123", register }: MainInpu
         placeholder={placeHolder}
         minLength={2}
         maxLength={7}
+        autoComplete="off"
       />
     </>
   )
