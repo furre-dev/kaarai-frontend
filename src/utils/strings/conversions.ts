@@ -3,8 +3,8 @@ export function convertNumberToDotString(input: number) {
 }
 
 export function truncateString(input: string) {
-  if (input.length > 10) {
-    return input.slice(0, -6) + "...";
+  if (input.length > 18) {
+    return input.slice(0, 15) + "...";
   }
   return input;
 }

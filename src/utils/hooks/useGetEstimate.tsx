@@ -35,5 +35,5 @@ export default function useGetEstimate(veh_reg: string) {
     })()
   }, [])
 
-  return { data, loading, error }
+  return { data, loading, error, setData }
 }

@@ -12,7 +12,7 @@ export async function getInsightsAi(market_avg_price: number, market_avg_mileage
       { role: "system", content: botInstructions },
       {
         role: "user",
-        content: "Current market avarage price:" + market_avg_price + ". Current market avarage mileage:" + ". Customer car estimated price:" + car_est_price + ". Current car mileage:" + car_mileage,
+        content: "Current market avarage price:" + market_avg_price + ". Current market avarage mileage:" + market_avg_mileage + ". Customer car estimated price:" + car_est_price + ". Current car mileage:" + car_mileage,
       },
     ],
   });

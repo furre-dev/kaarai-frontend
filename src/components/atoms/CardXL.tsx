@@ -23,7 +23,7 @@ export default function CardXL({ price, insights }: { price: number, insights: A
           <MainButton onClick={() => setRevealSidebar(!revealSidebar)} full_w className="whitespace-nowrap w-full" button_text={`${revealSidebar ? "Hide" : "Reveal"} AI Analysis`} helper_text="Get AI-driven insights on your car’s price, market position, and selling tips." />
         </div>
       </div>
-      <div id="style-2" className={`absolute overflow-y-scroll overflow-x-hidden h-full w-full z-[5] bg-kaar-950 rounded-[29px] top-0 transition-all duration-200 p-3 pr-[25%] ${revealSidebar ? "-left-[75%]" : "left-0"}`}>
+      {<div id="style-2" className={`insights absolute overflow-y-scroll overflow-x-hidden h-full w-full z-[5] bg-kaar-950 rounded-[29px] top-0 transition-all duration-200 p-3 pr-[25%] ${revealSidebar ? "-left-[75%] opacity-100" : "left-0 opacity-0"}`}>
         {insights && insights.map((item, i) => {
           return (
             <p key={i} className={`text-kaar-100 ${i !== 0 ? "my-2" : ""}`}>
@@ -32,7 +32,7 @@ export default function CardXL({ price, insights }: { price: number, insights: A
             </p>
           )
         })}
-      </div>
+      </div>}
     </section >
   )
 }

@@ -4,7 +4,7 @@ export function avgPrice(listings: ListingsType) {
     const price = listings[i].price
     totalPrice += price
   }
-  return Math.floor(totalPrice / listings.length)
+  return Math.round(totalPrice / listings.length)
 }
 
 export function avgMileage(listings: ListingsType) {
@@ -13,5 +13,5 @@ export function avgMileage(listings: ListingsType) {
     const mileage = listings[i].mileage
     totalMileage += mileage
   }
-  return Math.floor(totalMileage / listings.length)
+  return Math.round(totalMileage / listings.length)
 }

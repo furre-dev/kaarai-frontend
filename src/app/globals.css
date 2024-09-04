@@ -5,3 +5,21 @@
 * {
   scroll-behavior: smooth;
 }
+
+.insights::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+#mileageInput::-webkit-outer-spin-button,
+#mileageInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#mileageInput[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

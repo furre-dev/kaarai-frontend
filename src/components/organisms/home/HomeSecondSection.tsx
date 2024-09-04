@@ -12,13 +12,13 @@ export default function HomeSecondSection() {
     <section
       id="how-it-works"
       style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;" }}
-      className="w-screen py-[70px] bg-kaar-400 rounded-t-[100px] flex flex-col items-center text-center">
-      <h2 className="text-kaar-50 text-9xl font-black max-w-[773px]">How <span className="text-kaar-600">kaar.ai</span> works?</h2>
-      <ol className="space-y-[28px] max-w-[1166px] mt-[53px] mb-[33px]">
+      className="w-screen py-[70px] bg-kaar-400 rounded-t-[50px] lg:rounded-t-[100px] flex flex-col items-center text-center">
+      <h2 className="text-kaar-50 text-6xl lg:text-9xl font-black max-w-[773px]">How <span className="text-kaar-600">kaar.ai</span> works?</h2>
+      <ol className="space-y-[28px] max-w-[1166px] mt-[53px] mb-[33px] px-5">
         {HowItWorksListItems.map((str_arr, i) => {
           return (
             <li>
-              <p className="text-[36px] text-kaar-50 font-normal">
+              <p className="text-[16px] lg:text-[36px] text-kaar-50 font-normal">
                 <span className="font-bold">{`${i + 1}.  ${str_arr[0]}`}</span>
                 {str_arr[1]}
               </p>
