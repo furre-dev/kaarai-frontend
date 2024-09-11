@@ -10,7 +10,7 @@ import { extractJSONFromResponse } from "@/utils/openai/extractJsonFromResponse"
 import { getInsightsAi } from "@/utils/openai/getInsightsAi";
 import { useEffect, useState } from "react";
 
-const waitTimeInMs = 6000 //6 seconds, adjust if needed. This will keep the timeout and loading duration in sync.
+const waitTimeInMs = 6000 //6 seconds, adjust if needed. This will keep the setTimeout and loading duration in sync.
 
 export type AIResponseType = { heading: string, content: string }[]
 

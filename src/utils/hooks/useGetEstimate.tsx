@@ -8,11 +8,15 @@ export default function useGetEstimate(veh_reg: string) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<null | string>(null);
 
+  //This is a local Python Backend development environemnt API URL.
+  //TODO: Host backend on a server.
+  const API_URL = "http://127.0.0.1:8000/get-predicted-price"
+
   useEffect(() => {
     (async () => {
       setLoading(true)
       try {
-        const response = await fetch("http://127.0.0.1:8000/get-predicted-price", {
+        const response = await fetch(API_URL, {
           method: "POST",
           body: JSON.stringify({ veh_reg: veh_reg }),
           headers: {
